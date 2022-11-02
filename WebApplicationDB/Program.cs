@@ -49,7 +49,7 @@ app.MapPost("/update_product",
         var product = await dbContext.Products.FindAsync(productId);
         product!.Name = name;
         product.Price = price;
-        dbContext.Products.Update(product!);
+        
         await dbContext.SaveChangesAsync();
     });
 
